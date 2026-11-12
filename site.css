@@ -196,7 +196,7 @@ a { color: inherit; }
 .nav-toggle span::before,
 .nav-toggle span::after { transition: transform .2s ease, top .2s ease, background .2s ease; }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .nav-toggle { display: block; }
   .nav-links {
     display: none;
@@ -857,4 +857,217 @@ a { color: inherit; }
     align-items: start;
     text-align: left;
   }
+}
+
+
+/* ---------- About ---------- */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(36px, 7vw, 80px) 0 56px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 12% 20%, rgba(255, 93, 115, .22), transparent 42%),
+    radial-gradient(ellipse at 88% 10%, rgba(123, 92, 255, .28), transparent 45%),
+    radial-gradient(ellipse at 70% 90%, rgba(42, 157, 143, .16), transparent 40%),
+    radial-gradient(ellipse at 20% 85%, rgba(255, 122, 89, .14), transparent 40%),
+    var(--studio);
+}
+.about-hero .kicker { color: var(--gold); }
+.about-hero .wordmark { color: var(--cream); margin: 8px auto 10px; }
+.about-hero h1 {
+  margin: 0 0 14px;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  color: var(--cream);
+  line-height: 1.1;
+}
+.about-hero .lede {
+  margin: 0 auto;
+  color: var(--cream-dim);
+}
+.about-body {
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(255, 93, 115, .12), transparent 36%),
+    radial-gradient(ellipse at 90% 0%, rgba(123, 92, 255, .14), transparent 40%),
+    var(--studio-deep);
+  padding: 0 0 72px;
+}
+.about-body .about-letter {
+  margin-top: -28px;
+  position: relative;
+  z-index: 1;
+}
+.about-letter .lead {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--studio);
+  letter-spacing: -.02em;
+  margin-bottom: 16px;
+}
+.about-games-wrap {
+  width: min(100% - 40px, var(--wrap));
+  margin: 48px auto 0;
+}
+.about-games-wrap > h2,
+.about-feedback h2 {
+  margin: 0 0 8px;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  color: var(--cream);
+}
+.about-games-wrap > p {
+  margin: 0 0 22px;
+  color: var(--cream-dim);
+  font-size: 16px;
+}
+.about-games {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.about-game a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  text-decoration: none;
+  padding: 26px 18px 24px;
+  min-height: 100%;
+  border-radius: 24px;
+  transition: transform .35s var(--ease);
+}
+.about-game a:hover { transform: translateY(-6px); }
+.about-game .icon-app { width: 88px; height: 88px; }
+.about-game strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  line-height: 1.25;
+}
+.about-game span {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  opacity: .8;
+}
+.about-game-mb a {
+  font-family: var(--font);
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(179, 136, 255, .28), transparent 42%),
+    radial-gradient(circle at 86% 80%, rgba(76, 201, 240, .16), transparent 44%),
+    linear-gradient(#2c2760, #211d4b);
+  border: 1px solid rgba(255, 255, 255, .15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .32);
+}
+.about-game-mb span { color: var(--cream-dim); opacity: 1; }
+.about-game-sky {
+  border-radius: 28px;
+  padding: 8px;
+  background: linear-gradient(180deg, #7b5cff 0%, #c98cff 36%, #ff9ea0 68%, #ffcd96 100%);
+  box-shadow: 0 18px 40px rgba(120, 60, 90, .28);
+}
+.about-game-sky a {
+  font-family: var(--font-sky);
+  color: var(--sky-plum);
+  background: rgba(255, 255, 255, .94);
+  box-shadow: none;
+  border-radius: 22px;
+}
+.about-game-sky strong { font-weight: 900; }
+.about-game-kn {
+  border-radius: 26px;
+  padding: 8px;
+  background-color: var(--kn-paper);
+  background-image: url("paper-grain.png");
+  background-repeat: repeat;
+}
+.about-game-kn a {
+  font-family: var(--font-kn);
+  color: var(--kn-ink);
+  background: var(--kn-cream);
+  border: 3px solid var(--kn-ink);
+  border-radius: 22px;
+  box-shadow: 6px 8px 0 var(--kn-ink);
+}
+.about-game-kn strong { color: var(--kn-red); letter-spacing: 0; }
+.about-game-kn span { font-family: var(--font); color: var(--kn-ink); }
+.about-feedback {
+  width: min(100% - 40px, 760px);
+  margin: 48px auto 0;
+  background: #f7f4ee;
+  color: #222018;
+  border-radius: 28px;
+  padding: clamp(28px, 5vw, 44px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .28);
+}
+.about-feedback h2 {
+  color: var(--studio);
+  margin-bottom: 10px;
+}
+.about-feedback p {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2a271f;
+}
+.about-feedback a:not(.about-cta) { color: #3a2ea0; }
+.about-feedback a:not(.about-cta):hover { color: #1a1838; }
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--studio);
+  color: var(--cream) !important;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 1.2;
+}
+.about-cta:hover { background: #2c2760; color: var(--gold) !important; }
+.about-cta-alt {
+  background: transparent;
+  color: var(--studio) !important;
+  border: 2px solid var(--studio);
+}
+.about-cta-alt:hover { background: var(--studio); color: var(--cream) !important; }
+.nav-links a[aria-current="page"] { color: var(--cream); }
+
+@media (max-width: 700px) {
+  .about-games { grid-template-columns: 1fr; max-width: 400px; margin-inline: auto; }
+  .about-game a {
+    flex-direction: row;
+    text-align: left;
+    padding: 16px 16px;
+    gap: 16px;
+    align-items: center;
+  }
+  .about-game .icon-app { width: 72px; height: 72px; flex-shrink: 0; }
+  .about-game strong, .about-game span { text-align: left; }
+  .about-game a > div { min-width: 0; }
+}
+@media (max-width: 600px) {
+  .about-feedback { padding: 24px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-game a:hover { transform: none; }
 }
